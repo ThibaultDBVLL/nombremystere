@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Nombre Mystère</title>
+    <link <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Allura|Calligraffitti|Cinzel|Metamorphous|Mountains+of+Christmas|Quattrocento|Ruslan+Display|UnifrakturMaguntia|Walter+Turncoat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.7/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <h2>Devine le chiffre mystère !</h2>
-    <h3>(compris entre 0 et 9)</h3>
-    <div class="ui action input">
-    <input type="text" placeholder="Ecris un chiffre!">
-    <button class="ui button">Vérifie!</button>
-  </div>
-  <div id="ok">  </div>
+    <div id="tout">
+      <h1>Devine combien j'ai d'anneaux dans ma poche et ils seront à toi!</h1>
+      <div id = "consignes">Je possède entre 1 et 9 anneaux, tu as 3 essais pour deviner</div>
+      <div class="ui action input">
+      <input type="text" placeholder="Ecris un chiffre!">
+      <button class="ui button">Vérifie!</button>
+      </div>
+      <div id="astuce"> Astuce : </div>
+      <div id="score"> Anneaux gagnés : </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="js/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="js/app.js"></script>
+    </div>
   </body>
 </html>

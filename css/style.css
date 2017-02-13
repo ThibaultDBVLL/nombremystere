@@ -1,9 +1,19 @@
 body{
-  background-color: #110537;
+  background-image: url(http://images.freeimages.com/images/previews/b8b/my-precious-1498051.jpg);
+  background-repeat: no-repeat;
+  }
+
+#tout{
+  width:608px;
+  height: 440px;
 }
 
+h1,
 h2,
 h3,
-#ok{
+#astuce,
+#score,
+#consignes{
   color: white;
+  font-family: 'Metamorphous', cursive;
 }
