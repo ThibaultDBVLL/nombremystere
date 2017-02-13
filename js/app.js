@@ -1,28 +1,34 @@
 $(document).ready(function(){
 
-nbMyst = (Math.floor((9)*Math.random()+1));
-console.log(nbMyst);
-
-$(".button").click(function(){
+    var nbMyst = (Math.floor((9)*Math.random()+1));
+    console.log(nbMyst);
     var essai = $(".input").children("input").val();
     console.log(essai);
-  });
 
-var essai = $(".input").children("input").val();
-for(var i = 1; i<=3; i++){
-  console.log(essai);
-  if($(".button").onclick){
-    console.log(essai);
-     if (essai < nbMyst){
-      $("#ok").html('Jen ai plus que ça!');
-     } if (essai > nbMyst) {
-      $("#ok").html('Un peu moins!');
-     } if (essai == nbMyst) {
-       console.log('bravo!');
-      $("#ok").html("Tu as gagné, tiens, prends ces anneaux, tu les as bien mérités");
-       break;
-     }
-   }
+    // problème de scope, je sais ...
+    $(".button").click(function(){
+         essai = $(".input").children("input").val();
+        console.log(essai);
+      });
 
-}
+
+    $(".button").onclick(function(){
+        console.log(essai);
+        if (essai < nbMyst){
+          $("#astuce").html('Jen ai plus que ça!');
+          console.log('plus');
+        } if (essai > nbMyst) {
+          $("#astuce").html('Jaurais aimé en avoir autant !');
+          console.log('moins');
+        } if (essai == nbMyst) {
+          $("#ok").html("Tu as gagné, tiens, prends ces anneaux, tu les as bien mérités");
+          console.log('bravo!');
+        }
+      });
+
+
+    for(var i = 1; i<=3; i++){
+      game();
+  }
+
 });
