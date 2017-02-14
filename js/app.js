@@ -12,7 +12,7 @@ $(document).ready(function(){
       });
 
 
-    $(".button").onclick(function(){
+    $(".button").onclick(function(game){
         console.log(essai);
         if (essai < nbMyst){
           $("#astuce").html('Jen ai plus que ça!');
