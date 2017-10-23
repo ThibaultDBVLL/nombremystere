@@ -1,19 +1,20 @@
 $(document).ready(function(){
 
-    var nbMyst = (Math.floor((9)*Math.random()+1));
-    console.log(nbMyst);
-    var essai = $(".input").children("input").val();
-    console.log(essai);
+  var nbMyst = (Math.floor((9)*Math.random()+1));
+  console.log(nbMyst);
+  var essai = $(".input").children("input").val();
+  console.log(essai);
 
     // problème de scope, je sais ...
     $(".button").click(function(){
-         essai = $(".input").children("input").val();
-        console.log(essai);
-      });
+     essai = $(".input").children("input").val();
+     console.log(essai);
+   });
 
 
-    $(".button").onclick(function(game){
-        console.log(essai);
+    $(".button").click(function(){
+      console.log(essai);
+      for(var i = 1; i<=3; i++){
         if (essai < nbMyst){
           $("#astuce").html('Jen ai plus que ça!');
           console.log('plus');
@@ -24,11 +25,8 @@ $(document).ready(function(){
           $("#ok").html("Tu as gagné, tiens, prends ces anneaux, tu les as bien mérités");
           console.log('bravo!');
         }
-      });
+      };
 
+    })
 
-    for(var i = 1; i<=3; i++){
-      game();
-  }
-
-});
+  });
